@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import ServicesMarquee from "@/components/ServicesMarquee";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/ServicesSection";
+import GallerySection from "@/components/GallerySection";
 import DentistsSection from "@/components/DentistsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ReviewsSection from "@/components/ReviewsSection";
