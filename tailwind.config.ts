@@ -100,7 +100,6 @@ export default {
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
         "marquee": "marquee 20s linear infinite",
       },
-      },
     },
   },
   plugins: [require("tailwindcss-animate")],
