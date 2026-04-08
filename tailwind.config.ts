@@ -13,7 +13,15 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        heading: ['Poppins', 'sans-serif'],
+      },
       colors: {
+        'hero-bg': 'hsl(var(--hero-bg))',
+        'section-alt': 'hsl(var(--section-alt))',
+        'badge-bg': 'hsl(var(--badge-bg))',
+        'badge-text': 'hsl(var(--badge-text))',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
