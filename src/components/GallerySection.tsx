@@ -6,6 +6,9 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import gallery7 from "@/assets/gallery-7.png";
+import gallery8 from "@/assets/gallery-8.png";
+import gallery9 from "@/assets/gallery-9.png";
 
 const GALLERY = [
   { src: gallery1, alt: "Modern dental clinic interior with advanced equipment", label: "Our Clinic" },
@@ -14,6 +17,9 @@ const GALLERY = [
   { src: gallery4, alt: "Dentist treating a patient with care", label: "Patient Care" },
   { src: gallery5, alt: "Beautiful healthy smile after treatment", label: "Smile Results" },
   { src: gallery6, alt: "Happy family at dental clinic", label: "Family Dentistry" },
+  { src: gallery7, alt: "Modern dental treatment room with advanced equipment", label: "Treatment Room" },
+  { src: gallery8, alt: "Comfortable and welcoming clinic waiting area", label: "Waiting Area" },
+  { src: gallery9, alt: "Before and after smile transformation results", label: "Transformation" },
 ];
 
 const GallerySection = () => {
