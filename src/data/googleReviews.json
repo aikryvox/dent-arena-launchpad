@@ -1,59 +1,59 @@
 {
-  "rating": 4.9,
-  "reviewCount": 500,
+  "rating": 5.0,
+  "reviewCount": 5,
   "reviews": [
     {
       "id": "1",
-      "author": "Rajesh Kumar",
+      "author": "Vishal Bolia",
       "rating": 5,
-      "date": "2 weeks ago",
-      "relativeTimeDescription": "2 weeks ago",
-      "text": "Excellent dental care! Dr. Priya is very professional and gentle. The clinic is clean and well-maintained. Highly recommended!",
+      "date": "a month ago",
+      "relativeTimeDescription": "a month ago",
+      "text": "I had a wonderful experience with Dr. Mayank Shah. He is extremely professional, polite, and explains the entire treatment process very clearly before starting. His calm nature makes you feel comfortable and stress-free during the procedure. The clinic is neat and well-maintained, and the staff is also very cooperative.",
       "verified": true
     },
     {
       "id": "2",
-      "author": "Priya Patel",
+      "author": "Vishal Bagul",
       "rating": 5,
-      "date": "1 month ago",
-      "relativeTimeDescription": "1 month ago",
-      "text": "Best dental clinic in Surat. The staff is friendly and the treatment is painless. Worth every penny!",
+      "date": "3 months ago",
+      "relativeTimeDescription": "3 months ago",
+      "text": "I had an amazing experience at Dent Arena. The staff is professional, friendly, and truly cares about patient comfort. Dr. Mayank Shah is exceptionally experienced and explains every treatment in detail personally.",
       "verified": true
     },
     {
       "id": "3",
-      "author": "Amit Singh",
+      "author": "Amit Jindal",
       "rating": 5,
-      "date": "1 month ago",
-      "relativeTimeDescription": "1 month ago",
-      "text": "Had my teeth whitening done here. Results are amazing! The dentist explained everything clearly.",
+      "date": "2 months ago",
+      "relativeTimeDescription": "2 months ago",
+      "text": "One of the best dental experiences I’ve had. Dr. Mayank and Dr. Minal are very professional and gentle. They explained everything clearly and made me feel comfortable throughout the treatment. The clinic is clean and well maintained. Highly recommended!",
       "verified": true
     },
     {
       "id": "4",
-      "author": "Neha Desai",
-      "rating": 4,
+      "author": "Sonia Bhatt",
+      "rating": 5,
       "date": "2 months ago",
       "relativeTimeDescription": "2 months ago",
-      "text": "Good experience overall. The clinic has modern equipment and the doctors are knowledgeable.",
+      "text": "Excellent care at Dent Arena. Dr. Mayank Shah is highly accurate and very detailed in his work. The clinic is clean, the treatment was painless, and the overall care felt genuinely professional and reassuring.",
       "verified": true
     },
     {
       "id": "5",
-      "author": "Vikram Joshi",
+      "author": "Shah Viral",
       "rating": 5,
       "date": "2 months ago",
       "relativeTimeDescription": "2 months ago",
-      "text": "Had root canal treatment. Pain-free procedure! Dr. Rahul is excellent at his work.",
+      "text": "I highly recommend Dent Arena for dental care. We’ve visited several times and always received accurate and perfect treatment. Dr. Mayank Shah is very knowledgeable and the entire staff is very welcoming.",
       "verified": true
     },
     {
       "id": "6",
-      "author": "Anjali Sharma",
+      "author": "Manish Jain",
       "rating": 5,
-      "date": "3 months ago",
-      "relativeTimeDescription": "3 months ago",
-      "text": "Very professional team. They made me feel comfortable during my first visit. Will definitely come back!",
+      "date": "5 months ago",
+      "relativeTimeDescription": "5 months ago",
+      "text": "I had a fantastic experience at Dent Arena. Very clean and hygenic. Both Dr. Mayank Shah and Dr.Minal Shah are experts in their field. Staff also very active and Polite. I came from Mumbai for my treatment and was 100% satisfied.",
       "verified": true
     }
   ]
