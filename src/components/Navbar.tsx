@@ -23,9 +23,7 @@ const Navbar = () => {
       <div className="container-max flex items-center justify-between px-4 sm:px-6 lg:px-8 py-3">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-heading font-bold text-lg">D</span>
-          </div>
+          <img src="/logo.png" alt="Dent Arena Logo" className="w-14 h-9 rounded-lg" />
           <span className="font-heading font-bold text-xl text-foreground">
             Dent <span className="text-primary">Arena</span>
           </span>
