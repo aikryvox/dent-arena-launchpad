@@ -11,6 +11,9 @@ const AdminLogin = () => {
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
 
+    const adminUsername = import.meta.env.VITE_ADMIN_USERNAME || "admin";
+    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD || "admin123";
+
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setError("");
@@ -79,13 +82,6 @@ const AdminLogin = () => {
                             {loading ? "Logging in..." : "Login"}
                         </Button>
                     </form>
-
-                    {/* Demo Credentials */}
-                    <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                        <p className="text-xs font-medium text-blue-900 mb-2">Demo Credentials:</p>
-                        <p className="text-xs text-blue-800">Username: <code className="font-mono">admin</code></p>
-                        <p className="text-xs text-blue-800">Password: <code className="font-mono">admin123</code></p>
-                    </div>
                 </div>
             </div>
         </div>

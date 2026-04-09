@@ -6,6 +6,7 @@ import {
     getNextUpdateTime,
     StoredReviews,
 } from './reviewsStorageService';
+import fallbackReviewsData from '@/data/googleReviews.json';
 
 export interface GoogleReview {
     id: string;
@@ -25,7 +26,7 @@ export interface GooglePlaceDetails {
 }
 
 const GOOGLE_PLACES_API_KEY = import.meta.env.VITE_GOOGLE_PLACES_API_KEY || '';
-const PLACE_ID = 'ChIJuqGHvLqEzjkRnZGHvAe-_5c'; // Dent Arena Place ID
+const PLACE_ID = 'ChIJlQOoS21O4DsRXI9l6IWp4dA'; // Dent Arena Place ID
 
 /**
  * Fetch Google reviews from API (called only once every 5 days)
@@ -48,8 +49,8 @@ export const fetchGoogleReviews = async (): Promise<GooglePlaceDetails | null> =
 
         // Need to fetch fresh reviews from API
         if (!GOOGLE_PLACES_API_KEY) {
-            console.warn('Google Places API key not configured. Using fallback reviews.');
-            return null;
+            console.warn('Google Places API key not configured. Using JSON fallback reviews.');
+            return getFallbackReviews();
         }
 
         console.log('Fetching fresh reviews from Google Places API...');
@@ -129,57 +130,8 @@ export const getReviews = async (): Promise<GooglePlaceDetails | null> => {
  */
 export const getFallbackReviews = (): GooglePlaceDetails => {
     return {
-        rating: 4.9,
-        reviewCount: 500,
-        reviews: [
-            {
-                id: '1',
-                author: 'Rajesh Kumar',
-                rating: 5,
-                date: '2 weeks ago',
-                text: 'Excellent dental care! Dr. Priya is very professional and gentle. The clinic is clean and well-maintained. Highly recommended!',
-                verified: true,
-            },
-            {
-                id: '2',
-                author: 'Priya Patel',
-                rating: 5,
-                date: '1 month ago',
-                text: 'Best dental clinic in Surat. The staff is friendly and the treatment is painless. Worth every penny!',
-                verified: true,
-            },
-            {
-                id: '3',
-                author: 'Amit Singh',
-                rating: 5,
-                date: '1 month ago',
-                text: 'Had my teeth whitening done here. Results are amazing! The dentist explained everything clearly.',
-                verified: true,
-            },
-            {
-                id: '4',
-                author: 'Neha Desai',
-                rating: 4,
-                date: '2 months ago',
-                text: 'Good experience overall. The clinic has modern equipment and the doctors are knowledgeable.',
-                verified: true,
-            },
-            {
-                id: '5',
-                author: 'Vikram Joshi',
-                rating: 5,
-                date: '2 months ago',
-                text: 'Had root canal treatment. Pain-free procedure! Dr. Rahul is excellent at his work.',
-                verified: true,
-            },
-            {
-                id: '6',
-                author: 'Anjali Sharma',
-                rating: 5,
-                date: '3 months ago',
-                text: 'Very professional team. They made me feel comfortable during my first visit. Will definitely come back!',
-                verified: true,
-            },
-        ],
+        rating: fallbackReviewsData.rating,
+        reviewCount: fallbackReviewsData.reviewCount,
+        reviews: fallbackReviewsData.reviews,
     };
 };
