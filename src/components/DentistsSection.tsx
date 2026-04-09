@@ -1,8 +1,13 @@
+import doctor1 from "@/assets/doctor-1.png";
+import doctor2 from "@/assets/doctor-2.png";
+import doctor3 from "@/assets/doctor-3.png";
+import doctor4 from "@/assets/doctor-4.png";
+
 const DENTISTS = [
-  { name: "Dr. Priya Sharma", role: "General Dentist", image: "/doctor-1.png" },
-  { name: "Dr. Rahul Mehta", role: "Orthodontist", image: "/doctor-2.png" },
-  { name: "Dr. Anjali Verma", role: "Cosmetic Dentist", image: "/doctor-3.png" },
-  { name: "Dr. Vikram Patel", role: "Oral Surgeon", image: "/doctor-4.png" },
+  { name: "Dr. Priya Sharma", role: "General Dentist", image: doctor1 },
+  { name: "Dr. Rahul Mehta", role: "Orthodontist", image: doctor2 },
+  { name: "Dr. Anjali Verma", role: "Cosmetic Dentist", image: doctor3 },
+  { name: "Dr. Vikram Patel", role: "Oral Surgeon", image: doctor4 },
 ];
 
 const DentistsSection = () => (
