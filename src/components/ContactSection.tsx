@@ -1,8 +1,8 @@
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LOCATION } from "@/lib/constants";
 
-const WHATSAPP_URL =
-  "https://wa.me/919876543210?text=Hey%2C%20I%20want%20to%20book%20an%20appointment%20on%20teeth%20cleaning.";
+const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=919586635135&text=Hello%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20teeth%20cleaning.`;
 
 const ContactSection = () => (
   <section id="contact" className="section-padding bg-background">
@@ -22,7 +22,7 @@ const ContactSection = () => (
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Phone</h3>
-              <a href="tel:9876543210" className="text-muted-foreground text-sm hover:text-primary transition-colors">+91 98765 43210</a>
+              <a href={`tel:${LOCATION.phone.replace(/\s/g, "")}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">{LOCATION.phone}</a>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -31,7 +31,7 @@ const ContactSection = () => (
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Email</h3>
-              <a href="mailto:info@dentarena.com" className="text-muted-foreground text-sm hover:text-primary transition-colors">info@dentarena.com</a>
+              <a href={`mailto:${LOCATION.email}`} className="text-muted-foreground text-sm hover:text-primary transition-colors">{LOCATION.email}</a>
             </div>
           </div>
           <div className="flex items-start gap-4">
@@ -41,7 +41,7 @@ const ContactSection = () => (
             <div>
               <h3 className="font-semibold text-foreground">Location</h3>
               <a
-                href="https://google.com/maps/place/Dent+Arena/data=!4m2!3m1!1s0x0:0xd0e1a985e8658f5c?sa=X&ved=1t:2428&ictx=111"
+                href={LOCATION.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground text-sm hover:text-primary transition-colors"
@@ -56,12 +56,12 @@ const ContactSection = () => (
             </div>
             <div>
               <h3 className="font-semibold text-foreground">Working Hours</h3>
-              <p className="text-muted-foreground text-sm">Mon - Sat: 9:00 AM - 8:00 PM</p>
-              <p className="text-muted-foreground text-sm">Sunday: 10:00 AM - 2:00 PM</p>
+              <p className="text-muted-foreground text-sm">Mon - Sat: {LOCATION.workingHours.weekday}</p>
+              <p className="text-muted-foreground text-sm">Sunday: {LOCATION.workingHours.weekend}</p>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
-            <a href="tel:9876543210">
+            <a href={`tel:${LOCATION.phone.replace(/\s/g, "")}`}>
               <Button variant="outline" size="lg" className="gap-2 w-full sm:w-auto">
                 <Phone className="w-4 h-4" /> Call Now
               </Button>
@@ -75,7 +75,7 @@ const ContactSection = () => (
         <div className="rounded-xl overflow-hidden shadow-sm border h-72 lg:h-auto min-h-[300px]">
           <iframe
             title="Dent Arena Location"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.5!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd0e1a985e8658f5c!2sDent%20Arena!5e0!3m2!1sen!2sin!4v1700000000000"
+            src={LOCATION.googleMapsEmbedUrl}
             width="100%"
             height="100%"
             style={{ border: 0 }}

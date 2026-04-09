@@ -1,9 +1,9 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroDentist from "@/assets/hero-dentist.png";
+import { LOCATION } from "@/lib/constants";
 
-const WHATSAPP_URL =
-  "https://wa.me/919876543210?text=Hey%2C%20I%20want%20to%20book%20an%20appointment%20on%20teeth%20cleaning.";
+const WHATSAPP_URL = `https://wa.me/${LOCATION.phone.replace(/\D/g, "")}?text=Hey%2C%20I%20want%20to%20book%20an%20appointment%20on%20teeth%20cleaning.`;
 
 const HeroSection = () => (
   <section id="home" className="bg-hero-bg relative overflow-hidden">
@@ -27,7 +27,7 @@ const HeroSection = () => (
                 Book Appointment
               </Button>
             </a>
-            <a href="tel:9876543210">
+            <a href={`tel:${LOCATION.phone.replace(/\s/g, "")}`}>
               <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto">
                 <Phone className="w-4 h-4" /> Call Now
               </Button>

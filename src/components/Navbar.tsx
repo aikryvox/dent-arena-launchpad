@@ -6,14 +6,14 @@ const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
   { label: "Dentists", href: "#dentists" },
-  { label: "Testimonials", href: "#testimonials" },
+  // { label: "Testimonials", href: "#testimonials" },
   { label: "Reviews", href: "#reviews" },
   { label: "About Us", href: "#about" },
   { label: "Contact Us", href: "#contact" },
 ];
 
 const WHATSAPP_URL =
-  "https://wa.me/919876543210?text=Hey%2C%20I%20want%20to%20book%20an%20appointment%20on%20teeth%20cleaning.";
+  "https://wa.me/919586635135?text=Hey%2C%20I%20want%20to%20book%20an%20appointment%20on%20teeth%20cleaning.";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -47,7 +47,7 @@ const Navbar = () => {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:9876543210">
+          <a href="tel:9586635135">
             <Button variant="outline" size="sm" className="gap-2">
               <Phone className="w-4 h-4" /> Call Now
             </Button>
@@ -80,7 +80,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="flex flex-col gap-2 pt-2">
-            <a href="tel:9876543210">
+            <a href="tel:9586635135">
               <Button variant="outline" className="w-full gap-2">
                 <Phone className="w-4 h-4" /> Call Now
               </Button>

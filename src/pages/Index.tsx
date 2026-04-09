@@ -8,6 +8,7 @@ import GallerySection from "@/components/GallerySection";
 import DentistsSection from "@/components/DentistsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ReviewsSection from "@/components/ReviewsSection";
+import GoogleReviewsSection from "@/components/GoogleReviewsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -22,8 +23,9 @@ const Index = () => (
     <ServicesSection />
     <GallerySection />
     <DentistsSection />
-    <TestimonialsSection />
+    {/* <TestimonialsSection /> */}
     <ReviewsSection />
+    <GoogleReviewsSection />
     <ContactSection />
     <Footer />
     <FloatingCTA />

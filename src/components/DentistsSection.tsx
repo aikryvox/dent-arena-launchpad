@@ -1,8 +1,8 @@
 const DENTISTS = [
-  { name: "Dr. Priya Sharma", role: "General Dentist", initials: "PS" },
-  { name: "Dr. Rahul Mehta", role: "Orthodontist", initials: "RM" },
-  { name: "Dr. Anjali Verma", role: "Cosmetic Dentist", initials: "AV" },
-  { name: "Dr. Vikram Patel", role: "Oral Surgeon", initials: "VP" },
+  { name: "Dr. Priya Sharma", role: "General Dentist", image: "/doctor-1.png" },
+  { name: "Dr. Rahul Mehta", role: "Orthodontist", image: "/doctor-2.png" },
+  { name: "Dr. Anjali Verma", role: "Cosmetic Dentist", image: "/doctor-3.png" },
+  { name: "Dr. Vikram Patel", role: "Oral Surgeon", image: "/doctor-4.png" },
 ];
 
 const DentistsSection = () => (
@@ -16,14 +16,18 @@ const DentistsSection = () => (
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {DENTISTS.map((d) => (
-          <div key={d.name} className="bg-section-alt rounded-xl p-6 text-center group hover:shadow-md transition-shadow">
-            <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mx-auto mb-4 group-hover:bg-primary transition-colors">
-              <span className="text-2xl font-heading font-bold text-primary group-hover:text-primary-foreground transition-colors">
-                {d.initials}
-              </span>
+          <div key={d.name} className="bg-section-alt rounded-xl overflow-hidden group hover:shadow-lg transition-shadow">
+            <div className="relative w-full aspect-square bg-secondary overflow-hidden">
+              <img
+                src={d.image}
+                alt={d.name}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
-            <h3 className="font-heading font-semibold text-foreground">{d.name}</h3>
-            <p className="text-muted-foreground text-sm mt-1">{d.role}</p>
+            <div className="p-6 text-center">
+              <h3 className="font-heading font-semibold text-foreground">{d.name}</h3>
+              <p className="text-muted-foreground text-sm mt-1">{d.role}</p>
+            </div>
           </div>
         ))}
       </div>
