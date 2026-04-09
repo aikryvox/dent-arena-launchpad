@@ -39,7 +39,7 @@ const AboutSection = () => (
               </li>
             ))}
           </ul>
-          <a href="#contact">
+          <a href="#contact" className="mt-10 inline-block">
             <Button size="lg">Learn More</Button>
           </a>
         </div>
