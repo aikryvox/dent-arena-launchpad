@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
+import { getImagesByType } from "@/lib/imageStorage";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -9,8 +10,9 @@ import gallery6 from "@/assets/gallery-6.jpg";
 import gallery7 from "@/assets/gallery-7.png";
 import gallery8 from "@/assets/gallery-8.png";
 import gallery9 from "@/assets/gallery-9.png";
+import type { StoredImage } from "@/lib/imageStorage";
 
-const GALLERY = [
+const DEFAULT_GALLERY = [
   { src: gallery1, alt: "Modern dental clinic interior with advanced equipment", label: "Our Clinic" },
   { src: gallery2, alt: "Professional dental instruments and tools", label: "Advanced Tools" },
   { src: gallery3, alt: "Digital dental X-ray technology", label: "Digital X-Ray" },
@@ -24,6 +26,26 @@ const GALLERY = [
 
 const GallerySection = () => {
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const [gallery, setGallery] = useState(DEFAULT_GALLERY);
+
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        const storedImages = await getImagesByType("gallery");
+        if (storedImages.length > 0) {
+          const updatedGallery = storedImages.map((img: StoredImage, index: number) => ({
+            src: img.data,
+            alt: img.originalName,
+            label: `Gallery ${index + 1}`,
+          }));
+          setGallery(updatedGallery);
+        }
+      } catch (error) {
+        console.error("Error loading gallery images:", error);
+      }
+    };
+    loadImages();
+  }, []);
 
   return (
     <section id="gallery" className="section-padding bg-section-alt">
@@ -39,7 +61,7 @@ const GallerySection = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-          {GALLERY.map((img, i) => (
+          {gallery.map((img, i) => (
             <button
               key={i}
               onClick={() => setLightbox(i)}
@@ -77,8 +99,8 @@ const GallerySection = () => {
             <X className="w-8 h-8" />
           </button>
           <img
-            src={GALLERY[lightbox].src}
-            alt={GALLERY[lightbox].alt}
+            src={gallery[lightbox].src}
+            alt={gallery[lightbox].alt}
             className="max-w-full max-h-[85vh] rounded-xl object-contain"
             onClick={(e) => e.stopPropagation()}
           />
